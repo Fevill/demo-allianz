@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@aposin/ng-aquila/css/normalize.css",
+              "node_modules/@aposin/ng-aquila/themes/expert.css"
             ],
             "scripts": []
           },
@@ -68,8 +70,12 @@
               "browserTarget": "demo-allianz:build:production"
             },
             "development": {
-              "browserTarget": "demo-allianz:build:development"
+              "browserTarget": "demo-allianz:build:development",
+              "disableHostCheck": true
             }
+          },
+          "options": {
+            "host": "0.0.0.0"
           },
           "defaultConfiguration": "development"
         },
