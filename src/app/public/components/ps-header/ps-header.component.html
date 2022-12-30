@@ -1,0 +1,56 @@
+<header nx-header>
+
+  <nx-header-row class="ps-header-row no-padding">
+    <nx-header-brand>
+      <nx-header-app-title class="ps-header-no-border ps-headers-start" (click)="onMenuClicked()">
+        <nx-icon [name]="iconName" size="s"></nx-icon>
+      </nx-header-app-title>
+      <nx-link>
+        <a href="#">
+          <figure nxFigure>
+            <img class="ps-img" src="assets/imgs/logo-allianz-trade.png" alt="Brand Logo" />
+          </figure>
+        </a>
+      </nx-link>
+      <nx-header-app-title class="ps-header-app-title">{{service}}</nx-header-app-title>
+      <nx-header-app-title class="ps-header-no-border bu">{{bu}}</nx-header-app-title>
+    </nx-header-brand>
+  </nx-header-row>
+</header>
+<!-- <div *ngIf="isMenuOpen" class="dropdown-content">
+  <div nxLayout="grid" class="docs-grid-colored-grid grid-margin">
+    <div nxRow nxRowAlignContent="end,end,around,stretch">
+
+      <ng-container *ngFor="let mainNode of navigationLink">
+        <div nxCol="8,6,4,2" class="docs-grid-colored-col menu-items">
+          <h3 class="menu-header">
+            <a>{{ mainNode.label }}</a>
+          </h3>
+          <ng-container *ngFor="let childNode of mainNode?.children">
+            <a class="list-item" [routerLink]="childNode.link" routerLinkActive="active-link" (click)="onMenuClicked()"
+              [ngClass]="{ 'app-disabled': childNode.disabled }">{{ childNode.label }}
+            </a>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div> -->
+<div *ngIf="isMenuOpen" class="dropdown-content"> 
+  <div nxLayout="grid">
+    <div nxRow >
+      <ng-container *ngFor="let mainNode of navigationLink">
+        <div nxCol="8,6,4,2" class="docs-grid-colored-col menu-items">
+          <h3 class="menu-header">
+            <a>{{ mainNode.label }}</a>
+          </h3>
+          <ng-container *ngFor="let childNode of mainNode?.children">
+            <a class="list-item" [routerLink]="childNode.link" routerLinkActive="active-link" (click)="onMenuClicked()"
+              [ngClass]="{ 'app-disabled': childNode.disabled }">{{ childNode.label }}
+            </a>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

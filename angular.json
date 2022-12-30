@@ -30,9 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               "node_modules/@aposin/ng-aquila/css/normalize.css",
-              "node_modules/@aposin/ng-aquila/themes/expert.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },

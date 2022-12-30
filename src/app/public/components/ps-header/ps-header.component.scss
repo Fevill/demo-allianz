@@ -1,0 +1,95 @@
+$dark-blue: #0f2a3d;
+$white: white;
+$color-blue: #007ab3;
+
+.ps-img{
+    width: 10em;
+    height: 10em;
+}
+
+header.nx-header .ps-header-row{
+    background-color: $white;
+    border-color: $dark-blue;
+    height: auto;
+    &.no-padding{
+    padding-left: 0em;
+    padding-right: 0em;
+    }
+    &.no-border{
+    border:0em;
+    }
+}
+
+.nx-header__app-title{
+    &.bu,
+    &.ps-header-app-title{
+    border-color: $dark-blue;
+    font-weight: 900;
+    }
+
+    &.ps-header-no-border{
+        border: 0;
+        &.ps-headers-start{
+            margin-left: 0em;
+            padding-left: 0.7em; 
+            padding-right: 0.5em; 
+            cursor: pointer;
+        }
+    }
+
+    &.bu{
+        color: grey;
+        font-weight: 600;
+    }
+
+}
+
+.menu-header {
+    font-size: 1.5em;
+    color: $dark-blue;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 0.15em;
+  }
+
+  .list-item {
+    float: none;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: $dark-blue;
+    font-size: 1.3em;
+
+    letter-spacing: 0;
+    line-height: 1.5em;
+    cursor:pointer;
+    &.app-disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+    &:hover{
+        font-weight: 600;
+    }
+  }
+
+  .dropdown-content {
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%), 0 8px 19px 0 rgb(0 0 0 / 8%);
+  z-index: 99;
+  overflow: auto;
+  height: calc(100% - 5em);
+  border-top: 2px solid #ececec;
+  .close {
+    float: right;
+    font-size: 4rem;
+    margin: 2rem;
+    cursor: pointer;
+  }
+}
+
