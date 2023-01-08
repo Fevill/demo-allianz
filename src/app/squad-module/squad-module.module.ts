@@ -4,6 +4,7 @@ import { SquadDisplayComponent } from './squad-display/squad-display.component';
 import { SquadListComponent } from './squad-list/squad-list.component';
 import { SquadCreateComponent } from './squad-create/squad-create.component';
 import { SquadModifyComponent } from './squad-modify/squad-modify.component';import { RouterModule, Routes } from '@angular/router';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 const squadRoutes: Routes = [
   {
@@ -33,6 +34,7 @@ const squadRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    SharedModuleModule,
     RouterModule.forChild(squadRoutes)
   ],
   exports: [

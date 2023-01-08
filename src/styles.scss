@@ -6,9 +6,20 @@
 // @import "@aposin/ng-aquila/css/normalize.css";
 
 
-body{
-    background-color: #ffffff;
-    color: #0f2a3d;
+@import '../src/app/shared-module/scss/colors';
+@import '../src/app/shared-module/scss/variables';
+
+body {
+    background-color: $white;
+    color: $dark-blue;
 }
-    
-  
+
+.program-bar {
+    .nx-expansion-panel__header-content:hover,
+    .nx-expansion-panel__header-content {
+        background-color: $white !important;
+        color: $dark-blue !important;
+        height: $height-program-bar !important;;
+        box-shadow: 0 3px 8px 0 rgb(0 0 0 / 18%), 0 8px 19px 0 rgb(0 0 0 / 8%)!important;;
+    }
+}

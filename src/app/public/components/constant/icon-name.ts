@@ -1,4 +1,5 @@
 export const ICON_NAME = {
-    ELLIPSIS:'ellipsis-h',
-    ClOSE:'close'
+    BARS: 'bars',
+    ClOSE:'close',
+    ELLIPSIS:'ellipsis-h'
 }

@@ -1,0 +1,14 @@
+<header nx-header class="top-bar">
+    <nx-header-brand class="nx-margin-right-5xl">
+        <nx-header-app-title>{{header.title}}</nx-header-app-title>
+    </nx-header-brand>
+
+    <nx-header-actions>
+        <ng-container *ngFor="let item of iconItems">
+            <button nxPlainButton *ngIf="hasIconItem(item.action)" class="ps-plain-button" (click)="onButtonClick(item.action)">
+                <nx-icon [name]="item.icon" [attr.aria-label]="item.label"></nx-icon>
+                <span class="ps-label">{{item.label}}</span>
+            </button>
+        </ng-container>
+    </nx-header-actions>
+</header>

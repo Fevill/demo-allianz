@@ -5,6 +5,8 @@ import { ProgramDisplayComponent } from './program-display/program-display.compo
 import { ProgramModifyComponent } from './program-modify/program-modify.component';
 import { ProgramListComponent } from './program-list/program-list.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { ProgramEditComponent } from './program-edit/program-edit.component';
 
 const programRoutes: Routes = [
   {
@@ -31,10 +33,12 @@ const programRoutes: Routes = [
     ProgramCreateComponent,
     ProgramDisplayComponent,
     ProgramModifyComponent,
-    ProgramListComponent
+    ProgramListComponent,
+    ProgramEditComponent
   ],
   imports: [
     CommonModule,
+    SharedModuleModule,
     RouterModule.forChild(programRoutes)
   ],
   exports: [
