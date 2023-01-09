@@ -13,21 +13,4 @@ import { SERVICES } from '../constant/services';
 })
 export class PsHeaderComponent {
   
-  bu!:string;
-  iconName!:string;
-  isMenuOpen!:boolean;
-  service!:string;
-  navigationLink = NAVIGATION_LINK
-
-  ngOnInit():void{
-    this.service = SERVICES.AVALIS;
-    this.iconName = ICON_NAME.ELLIPSIS
-    this.bu = BUSINESS_UNIT.FRANCE
-  }
-
-  onMenuClicked():void{
-    this.isMenuOpen = !this.isMenuOpen;
-    this.iconName = this.isMenuOpen?ICON_NAME.ClOSE:ICON_NAME.ELLIPSIS;
-  }
-
 }

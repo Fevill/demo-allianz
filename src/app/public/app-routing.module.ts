@@ -4,19 +4,11 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'programe',
+    path: 'accounting',
     loadChildren: () =>
-      import('../program-module/program-module.module').then(p => p.ProgramModuleModule),
+      import('../accounting-module/accounting-module.module').then(a => a.AccountingModuleModule),
   },
-  {
-    path: 'squad',
-    loadChildren: () =>
-      import('../squad-module/squad-module.module').then(s => s.SquadModuleModule),
-  },
+  { path: '', redirectTo: 'accounting', pathMatch: 'full' },
 ];
 
 @NgModule({
