@@ -6,10 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
+
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, HeaderComponent],
+    declarations: [AppComponent, HomeComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -17,6 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
         HttpClientJsonpModule,
         HttpClientModule,
         ReactiveFormsModule,
+        SharedModuleModule,
         AppRoutingModule,
     ],
     bootstrap: [AppComponent],

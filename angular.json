@@ -26,6 +26,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/app/accounting-module/assets",
               "src/assets"
             ],
             "styles": [

@@ -1,0 +1,15 @@
+@import '../../shared-module/scss/variables.scss';
+
+img {
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.accounting-row,
+.accounting {
+    height: $height-3;
+}
+
+header.accounting-header {
+    background-color: red;
+}
