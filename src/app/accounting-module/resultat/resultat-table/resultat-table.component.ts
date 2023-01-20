@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EnumType } from 'src/app/shared-module/components/data-table/models/enum-type';
 import { Theader } from 'src/app/shared-module/components/data-table/models/Theader';
-import JOURNAL from '../../../shared-module/constant/data/journal.json';
+import JOURNAL from '../../../../shared-module/constant/data/journal.json';
 
 @Component({
   selector: 'resultat-table',
