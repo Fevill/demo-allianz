@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "label": "Row 1",
+        "dateCreation": "2023-01-12",
+        "credit": {
+            "id": "4",
+            "number": "1040",
+            "name": "Effets à recevoir",
+            "typeId": "1"
+        },
+        "debit": {
+            "id": "6",
+            "number": "1080",
+            "name": "Actions",
+            "typeId": "1"
+        },
+        "tva?": "20",
+        "amount": 40,
+        "note": "Note 1"
+    },
+    {
+        "id": "2",
+        "label": "Row 2",
+        "dateCreation": "2023-01-12",
+        "credit": {
+            "id": "6",
+            "number": "1080",
+            "name": "Actions",
+            "typeId": "1"
+        },
+        "debit": {
+            "id": "2",
+            "number": "1010",
+            "name": "Poste",
+            "typeId": "1"
+        },
+        "tva?": "20",
+        "amount": 50,
+        "note": "Note 2"
+    },
+    {
+        "id": "3",
+        "label": "Row 3",
+        "dateCreation": "2023-01-12",
+        "credit": {
+            "id": "2",
+            "number": "1010",
+            "name": "Poste",
+            "typeId": "1"
+        },
+        "debit": {
+            "id": "1",
+            "number": "1000",
+            "name": "Caisse",
+            "typeId": "1"
+        },
+        "tva?": "20",
+        "amount": 5,
+        "note": "Note 3"
+    },
+    {
+        "id": "4",
+        "label": "Row 4",
+        "dateCreation": "2023-01-12",
+        "credit": {
+            "id": "1",
+            "number": "1000",
+            "name": "Caisse",
+            "typeId": "1"
+        },
+        "debit": {
+            "id": "2",
+            "number": "1010",
+            "name": "Poste",
+            "typeId": "1"
+        },
+        "tva?": "20",
+        "amount": 35,
+        "note": "Note 4"
+    },
+    {
+        "id": "5",
+        "label": "Row 5",
+        "dateCreation": "2023-01-12",
+        "credit": {
+            "id": "2",
+            "number": "1010",
+            "name": "Poste",
+            "typeId": "1"
+        },
+        "debit": {
+            "id": "1",
+            "number": "1000",
+            "name": "Caisse",
+            "typeId": "1"
+        },
+        "tva?": "20",
+        "amount": 42,
+        "note": "Note 5"
+    }
+]

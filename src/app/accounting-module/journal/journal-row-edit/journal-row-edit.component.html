@@ -1,0 +1,47 @@
+<div class="container">
+    <form [formGroup]="form" class="row">
+          <!-- {{form?.value| json}} -->
+        <div class="form-group col-9">
+            <label for="label">Libellé</label>
+            <input type="text" formControlName="label" class="form-control" id="label" placeholder="Libellé">
+        </div>
+        <div class="form-group col-3">
+            <label for="dateCreation">Date</label>
+            <input type="date" formControlName="dateCreation" class="form-control" id="dateCreation">
+        </div>
+        <div class="form-group col-6">
+            <label for="debitId">Debit</label>
+            <select class="form-control" formControlName="debitId" id="debitId" >
+                <option *ngFor="let item of accounts" [ngValue]="item.id">{{item.name}}</option>
+            </select>
+        </div>
+        <div class="form-group col-6">
+            <label for="creditId">Credit</label>
+            <select class="form-control" formControlName="creditId" id="creditId" >
+                <option *ngFor="let item of accounts" [ngValue]="item.id">{{item.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group col-9" >
+            <label for="amount">Montant</label>
+            <input type="number" formControlName="amount" class="form-control" id="amount" placeholder="Montant">
+        </div>       
+        <div class="form-group col-3">
+            <label for="tva">TVA</label>
+            <input type="number" formControlName="tva" class="form-control" id="tva" placeholder="TVA">
+        </div>
+        <div class="form-group">
+            <label for="note">Note</label>
+            <textarea rows="6" formControlName="note" class="form-control" id="note" placeholder="Note"></textarea>
+        </div>
+     
+        <div class="d-flex flex-row-reverse">
+            <div class="py-3 ps-3">
+                <button type="submit" class="btn btn-primary" (click)="valide()">Valider</button>
+            </div>
+            <div class="py-3 ps-3">
+                <button type="submit" class="btn btn-secondary" (click)="cancel()">Annuler</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,494 @@
+[
+    {
+        "id": "1",
+        "number": "1000",
+        "name": "Caisse",
+        "typeId": "1"
+    },
+    {
+        "id": "2",
+        "number": "1010",
+        "name": "Poste",
+        "typeId": "1"
+    },
+    {
+        "id": "3",
+        "number": "1020",
+        "name": "Banque",
+        "typeId": "1"
+    },
+    {
+        "id": "4",
+        "number": "1040",
+        "name": "Effets à recevoir",
+        "typeId": "1"
+    },
+    {
+        "id": "5",
+        "number": "1060",
+        "name": "Titres",
+        "typeId": "1"
+    },
+    {
+        "id": "6",
+        "number": "1080",
+        "name": "Actions",
+        "typeId": "1"
+    },
+    {
+        "id": "7",
+        "number": "1100",
+        "name": "Créances clients",
+        "typeId": "1"
+    },
+    {
+        "id": "8",
+        "number": "1108",
+        "name": "Créances douteuses",
+        "typeId": "1"
+    },
+    {
+        "id": "9",
+        "number": "1109",
+        "name": "Provisions pour pertes",
+        "typeId": "1"
+    },
+    {
+        "id": "10",
+        "number": "1110",
+        "name": "Autres créances",
+        "typeId": "1"
+    },
+    {
+        "id": "11",
+        "number": "1170",
+        "name": "TVA à récupérer",
+        "typeId": "13"
+    },
+    {
+        "id": "12",
+        "number": "1172",
+        "name": "Créance AFC",
+        "typeId": "1"
+    },
+    {
+        "id": "13",
+        "number": "1192",
+        "name": "Acomptes aux fournisseurs",
+        "typeId": "1"
+    },
+    {
+        "id": "14",
+        "number": "1193",
+        "name": "Effets protestés",
+        "typeId": "1"
+    },
+    {
+        "id": "15",
+        "number": "1200",
+        "name": "Stocks de marchandises",
+        "typeId": "1"
+    },
+    {
+        "id": "16",
+        "number": "1300",
+        "name": "Actifs transitoires",
+        "typeId": "1"
+    },
+    {
+        "id": "17",
+        "number": "1420",
+        "name": "Titres de participation",
+        "typeId": "2"
+    },
+    {
+        "id": "18",
+        "number": "1450",
+        "name": "Créances à long terme",
+        "typeId": "2"
+    },
+    {
+        "id": "19",
+        "number": "1500",
+        "name": "Machines et appareils",
+        "typeId": "2"
+    },
+    {
+        "id": "20",
+        "number": "1510",
+        "name": "Mobiliers et installations",
+        "typeId": "2"
+    },
+    {
+        "id": "21",
+        "number": "1520",
+        "name": "Machines de bureau",
+        "typeId": "2"
+    },
+    {
+        "id": "22",
+        "number": "1521",
+        "name": "Infrastructure informatique",
+        "typeId": "2"
+    },
+    {
+        "id": "23",
+        "number": "1530",
+        "name": "Véhicules",
+        "typeId": "2"
+    },
+    {
+        "id": "242",
+        "number": "1540",
+        "name": "Outillage",
+        "typeId": "2"
+    },
+    {
+        "id": "25",
+        "number": "1600",
+        "name": "Immeubles",
+        "typeId": "2"
+    },
+    {
+        "id": "26",
+        "number": "1700",
+        "name": "Brevets",
+        "typeId": "2"
+    },
+    {
+        "id": "27",
+        "number": "2000",
+        "name": "Dettes fournisseurs",
+        "typeId": "3"
+    },
+    {
+        "id": "28",
+        "number": "2010",
+        "name": "Autres dettes",
+        "typeId": "3"
+    },
+    {
+        "id": "29",
+        "number": "2030",
+        "name": "Acomptes clients",
+        "typeId": "3"
+    },
+    {
+        "id": "30",
+        "number": "2170",
+        "name": "Dettes AVS",
+        "typeId": "3"
+    },
+    {
+        "id": "31",
+        "number": "2175",
+        "name": "Dettes LPP",
+        "typeId": "3"
+    },
+    {
+        "id": "32",
+        "number": "2200",
+        "name": "TVA due",
+        "typeId": "13"
+    },
+    {
+        "id": "33",
+        "number": "2205",
+        "name": "Dettes AFC",
+        "typeId": "3"
+    },
+    {
+        "id": "34",
+        "number": "2230",
+        "name": "Dividendes",
+        "typeId": "3"
+    },
+    {
+        "id": "35",
+        "number": "2300",
+        "name": "Passifs transitoires",
+        "typeId": "3"
+    },
+    {
+        "id": "36",
+        "number": "2440",
+        "name": "Dettes hypothécaires",
+        "typeId": "3"
+    },
+    {
+        "id": "37",
+        "number": "2500",
+        "name": "Prêt obtenu",
+        "typeId": "3"
+    },
+    {
+        "id": "38",
+        "number": "2800",
+        "name": "Capital",
+        "typeId": "4"
+    },
+    {
+        "id": "39",
+        "number": "2850",
+        "name": "Privé",
+        "typeId": "13"
+    },
+    {
+        "id": "4O",
+        "number": "2900",
+        "name": "Réserves",
+        "typeId": "4"
+    },
+    {
+        "id": "41",
+        "number": "2970",
+        "name": "Bénéfice reporté",
+        "typeId": "4"
+    },
+    {
+        "id": "42",
+        "number": "2979",
+        "name": "Résultat de l'exercice",
+        "typeId": "13"
+    },
+    {
+        "id": "43",
+        "number": "3000",
+        "name": "Ventes de produits fabriqués",
+        "typeId": "5"
+    },
+    {
+        "id": "44",
+        "number": "3200",
+        "name": "Ventes de marchandises",
+        "typeId": "5"
+    },
+    {
+        "id": "45",
+        "number": "3290",
+        "name": "Déductions accordées",
+        "typeId": "14"
+    },
+    {
+        "id": "46",
+        "number": "3293",
+        "name": "Commissions versées à des tiers",
+        "typeId": "6"
+    },
+    {
+        "id": "47",
+        "number": "3400",
+        "name": "Honoraires",
+        "typeId": "5"
+    },
+    {
+        "id": "48",
+        "number": "3410",
+        "name": "Revenus Internet",
+        "typeId": "5"
+    },
+    {
+        "id": "49",
+        "number": "3600",
+        "name": "Produit des travaux",
+        "typeId": "5"
+    },
+    {
+        "id": "50",
+        "number": "3630",
+        "name": "Autres produits",
+        "typeId": "5"
+    },
+    {
+        "id": "51",
+        "number": "3700",
+        "name": "Prestations à soi-même",
+        "typeId": "5"
+    },
+    {
+        "id": "52",
+        "number": "4200",
+        "name": "Achats de marchandises",
+        "typeId": "6"
+    },
+    {
+        "id": "53",
+        "number": "4270",
+        "name": "Frais d'achats",
+        "typeId": "6"
+    },
+    {
+        "id": "54",
+        "number": "4280",
+        "name": "Variations de stocks de marchandises",
+        "typeId": "13"
+    },
+    {
+        "id": "55",
+        "number": "4290",
+        "name": "Déductions obtenues",
+        "typeId": "13"
+    },
+    {
+        "id": "56",
+        "number": "4400",
+        "name": "Prestations et travaux de tiers",
+        "typeId": "6"
+    },
+    {
+        "id": "57",
+        "number": "5200",
+        "name": "Salaires",
+        "typeId": "7"
+    },
+    {
+        "id": "58",
+        "number": "5270",
+        "name": "Charges sociales",
+        "typeId": "7"
+    },
+    {
+        "id": "59",
+        "number": "5280",
+        "name": "Autres charges de personnel",
+        "typeId": "7"
+    },
+    {
+        "id": "60",
+        "number": "6000",
+        "name": "Loyer",
+        "typeId": "8"
+    },
+    {
+        "id": "61",
+        "number": "6100",
+        "name": "Entretien et réparations",
+        "typeId": "8"
+    },
+    {
+        "id": "62",
+        "number": "6200",
+        "name": "Frais de véhicules",
+        "typeId": "8"
+    },
+    {
+        "id": "63",
+        "number": "6280",
+        "name": "Frais d'expédition",
+        "typeId": "8"
+    },
+    {
+        "id": "64",
+        "number": "6300",
+        "name": "Assurances",
+        "typeId": "8"
+    },
+    {
+        "id": "65",
+        "number": "6400",
+        "name": "Electricité, gaz",
+        "typeId": "8"
+    },
+    {
+        "id": "66",
+        "number": "6500",
+        "name": "Frais d'administration",
+        "typeId": "8"
+    },
+    {
+        "id": "67",
+        "number": "6510",
+        "name": "Téléphone, fax, Internet",
+        "typeId": "8"
+    },
+    {
+        "id": "68",
+        "number": "6570",
+        "name": "Frais informatiques",
+        "typeId": "8"
+    },
+    {
+        "id": "69",
+        "number": "6600",
+        "name": "Publicité",
+        "typeId": "8"
+    },
+    {
+        "id": "70",
+        "number": "6700",
+        "name": "Autres charges d'exploitation",
+        "typeId": "8"
+    },
+    {
+        "id": "71",
+        "number": "6710",
+        "name": "Différences de caisse",
+        "typeId": "8"
+    },
+    {
+        "id": "72",
+        "number": "6800",
+        "name": "Intérêts-charges, frais bancaires",
+        "typeId": "8"
+    },
+    {
+        "id": "73",
+        "number": "6900",
+        "name": "Amortissements",
+        "typeId": "8"
+    },
+    {
+        "id": "74",
+        "number": "7400",
+        "name": "Produits des titres",
+        "typeId": "9"
+    },
+    {
+        "id": "75",
+        "number": "7401",
+        "name": "Produits des placements financiers",
+        "typeId": "9"
+    },
+    {
+        "id": "76",
+        "number": "7410",
+        "name": "Charges sur placement financiers",
+        "typeId": "10"
+    },
+    {
+        "id": "77",
+        "number": "7500",
+        "name": "Produits d'immeubles",
+        "typeId": "9"
+    },
+    {
+        "id": "78",
+        "number": "7510",
+        "name": "Charges d'immeubles",
+        "typeId": "10"
+    },
+    {
+        "id": "79",
+        "number": "8000",
+        "name": "Produits exceptionnels",
+        "typeId": "11"
+    },
+    {
+        "id": "80",
+        "number": "8010",
+        "name": "Charges exceptionnelles",
+        "typeId": "12"
+    },
+    {
+        "id": "81",
+        "number": "8900",
+        "name": "Impôt sur le bénéfice",
+        "typeId": "12"
+    },
+    {
+        "id": "82",
+        "number": "8910",
+        "name": "Impôt sur le capital",
+        "typeId": "12"
+    }
+]

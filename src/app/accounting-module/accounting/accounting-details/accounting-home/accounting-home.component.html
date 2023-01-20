@@ -1,0 +1,37 @@
+<div class="container-fluid accounting">
+    <div class="row accounting-row">
+      <div class="col">
+        <!-- Données -->
+        <div class="pt-5">
+          <h5>Données</h5>
+          <div>
+            <p>Nom de l'entreprise : <span>{{business.name}}</span></p>
+            <p>Début de l'exercice comptable : <span>{{business.fiscalexercise?.startDate}}</span></p>
+            <p>Fin de l'exercice comptable : <span>{{business.fiscalexercise?.endDate}}</span></p>
+          </div>
+        </div>
+  
+        <!-- Comptes -->
+        <div class="pt-5">
+          <h5>Comptes</h5>
+          <div>
+            <p>Gestion des comptes</p>
+            <button type="button" (click)="gotoAccount()" class="btn btn-primary">Gérer ...</button>
+          </div>
+        </div>
+  
+        <!-- Informations -->
+        <div class="pt-5">
+          <h5>Informations</h5>
+          <div>
+            <p>versions du logiciel : v0.0.1</p>
+          </div>
+        </div>
+  
+      </div>
+      <div class="col align-self-center">
+        <img src="app/accounting-module/assets/accounting-home-page.jpg" class="rounded d-block"
+          alt="accounting-home-page">
+      </div>
+    </div>
+  </div>

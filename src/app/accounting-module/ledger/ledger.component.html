@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-group col-sm-6 col-md-5 col-lg-4 col-xl-3 py-2">
+            <label class="text-center">Compte</label>
+            <select class="form-control"  [(ngModel)]="account" (change)="searchAccount()">
+                <option *ngFor="let item of accounts" [ngValue]="item">{{item.name}}</option>
+            </select>
+        </div>
+    </div>
+    <ng-container *ngIf="soldLedger">
+        <div class="row justify-content-md-center pb-2">
+            <div class="form-group col-3">
+                <div class="text-center">Total debit : {{soldLedger.debit.total}} <span *ngIf="soldLedger.debit.offset"> + ({{soldLedger.debit.offset}})</span></div>
+            </div>
+            <div class="form-group col-3">
+                <div class="text-center">Solde : {{soldLedger.sold}}</div>
+            </div>
+            <div class="form-group col-3">
+                <div class="text-center">Total credit : {{soldLedger.credit.total}} <span *ngIf="soldLedger.credit.offset"> + ({{soldLedger.credit.offset}})</span></div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center pb-2">
+                    <div class="form-group col">
+                        <data-table [headers]="headers" [data]="soldLedger.debit.ledgerRow"></data-table>
+                    </div>
+                    <div class="form-group col">
+                        <data-table [headers]="headers" [data]="soldLedger.credit.ledgerRow"></data-table>
+                    </div>
+        </div>
+    </ng-container>
+</div>

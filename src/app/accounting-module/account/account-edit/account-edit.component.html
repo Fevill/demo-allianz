@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="form">
+        <div class="form-group" *ngIf="accounts">
+            <label for="updateAccount">Compte à modifier</label>
+            <select class="form-control" formControlName="updateAccount" id="updateAccount" (change)="handelOnChange()">
+                <option *ngFor="let item of accounts" [ngValue]="item.id">{{item.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="number">N° du compte</label>
+            <input type="text" formControlName="number" class="form-control" id="number" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="name">Nom du compte</label>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nom">
+        </div>
+        <div class="form-group">
+            <label for="type">Type de compte</label>
+            <select class="form-control" formControlName="typeId" id="type">
+                <option *ngFor="let item of typeAccount" [ngValue]="item.id">{{item.name}}</option>
+            </select>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <div class="py-3 ps-3">
+                <button type="submit" class="btn btn-primary" (click)="valide()">Valider</button>
+            </div>
+            <div class="py-3 ps-3">
+                <button type="submit" class="btn btn-secondary" (click)="cancel()">Annuler</button>
+            </div>
+        </div>
+    </form>
+</div>

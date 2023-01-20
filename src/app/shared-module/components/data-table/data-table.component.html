@@ -1,0 +1,24 @@
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th *ngFor="let head of headers" scope="col">{{head.display}}</th>
+            <th scope="col" *ngIf="hasAction"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <th *ngFor="let head of headers" scope="col">{{item[head.label] | cellFormatter : head}}</th>
+            <th scope="col"  *ngIf="hasAction" class="pointer dropdown" data-bs-toggle="dropdown">
+                
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" (click)="navigate(enumCtx.UPDATE,item)"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></li>
+                  <li><a class="dropdown-item" (click)="navigate(enumCtx.COPY,item)"><i class="fa-solid fa-copy"></i> Dupliquer</a></li>
+                  <li><a class="dropdown-item"(click)="navigate(enumCtx.DISPLAY,item)"><i class="fa-solid fa-eye"></i> Afficher</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" (click)="navigate(enumCtx.DELETE,item)"><i class="fa-solid fa-trash"></i> Supprimer</a></li>
+                </ul>
+            </th>
+        </tr>
+    </tbody>
+</table>
