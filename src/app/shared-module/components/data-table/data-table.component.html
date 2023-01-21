@@ -1,13 +1,13 @@
 <table class="table table-hover table-striped">
-    <thead *ngIf="headers.isShow">
+    <thead *ngIf="headersLocal.isShow">
         <tr>
-            <th *ngFor="let head of headers.columns" [ngClass]="head.label" [ngStyle]="{'width':head?.width}">{{head.display}}</th>
+            <th *ngFor="let head of headersLocal.columns" [ngClass]="head.label" [ngStyle]="{'width':head?.width}">{{head.display}}</th>
             <th *ngIf="hasAction"></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of data">
-            <th *ngFor="let head of headers.columns" [ngClass]="head.label" [ngStyle]="{'width':head?.width}">{{item | cellFormatter : head}}</th>
+            <th *ngFor="let head of headersLocal.columns" [ngClass]="head.label" [ngStyle]="{'width':head?.width}">{{item | cellFormatter : head}}</th>
             <th *ngIf="hasAction" class="pointer dropdown" data-bs-toggle="dropdown">
                 
                 <i class="fa-solid fa-ellipsis-vertical"></i>

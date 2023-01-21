@@ -8,6 +8,7 @@ import { AccountSold } from '../model/account-sold';
 import { Bilan } from '../model/bilan';
 import { DebitCredit } from '../model/debit-credit';
 import { JournalRow } from '../model/journal-row';
+import moment from 'moment';
 
 @Component({
   selector: 'bilan',
@@ -20,7 +21,9 @@ export class BilanComponent {
   bilanActImoCapital!: Bilan[];
   totalPassifs!: number;
   totalActifs!: number;
-  journal!:JournalRow[];
+  journal!: JournalRow[];
+  date:string = '2023-12-31';
+
 
   headers: Theader = {
     columns: [
@@ -34,33 +37,27 @@ export class BilanComponent {
   }
 
   ngOnInit() {
-    this.getJournal();
-    this.bilanActCirDebt = this.setData(this.bilanActCirDebt, ['1'], ['3'], 'Actifs circulants', 'Dettes')
-    this.bilanActImoCapital = this.setData(this.bilanActImoCapital, ['2'], ['4'], 'Actifs immobilisés', 'Capitaux')
-    this.totalActifs = this.bilanActCirDebt.reduce((prev, curr) => prev + (curr?.actif?.amount ?? 0), 0)
-    this.totalActifs += this.bilanActImoCapital.reduce((prev, curr) => prev + (curr?.actif?.amount ?? 0), 0)
-    this.totalPassifs = this.bilanActCirDebt.reduce((prev, curr) => prev + (curr?.passif?.amount ?? 0), 0)
-    this.totalPassifs += this.bilanActImoCapital.reduce((prev, curr) => prev + (curr?.passif?.amount ?? 0), 0)
+    this.setData()
   }
 
   getBilanAccount(): Account[] {
     return ACCOUNTS.filter((acc) => acc.category === 'BIL');
   }
 
-  getJournal():void{
-    this.journal = JOURNAL;
-    let j: JournalRow = 
+  getJournal(): void {
+    this.journal = [...JOURNAL]
+    let j: JournalRow =
       {
         "id": "8",
         "label": "Arachide",
         "dateCreation": "2023-01-12",
         "credit": {
-            "id": "",
-            "number": "2800",
-            "name": "Capital",
-            "typeId": "4",
-            "category": "",
-            "patrimoine": ""
+          "id": "",
+          "number": "2800",
+          "name": "Capital",
+          "typeId": "4",
+          "category": "",
+          "patrimoine": ""
         },
         "debit": {
           "id": "42",
@@ -71,13 +68,13 @@ export class BilanComponent {
           "patrimoine": "PAS"
         },
         "tva?": "20",
-        "amount":35,
+        "amount": 35,
         "note": "Note 5"
-    } as JournalRow;
+      } as JournalRow;
     this.journal.push(j)
   }
 
-  setData(bilanData: Bilan[], actifFilters: string[], passifFilters: string[], actifHeader: string, passifHeader: string): Bilan[] {
+  setBilanData(bilanData: Bilan[], actifFilters: string[], passifFilters: string[], actifHeader: string, passifHeader: string): Bilan[] {
     bilanData = [];
     let head = {
       actif: {
@@ -113,7 +110,10 @@ export class BilanComponent {
   }
 
   getDebitOrCreditTotal(DebitOrCredit: DebitCredit, accountId: string): number {
+    const starDate = moment('01-01-2023', 'DD-MM-YYYY');
+    const endDate = moment(this.date, 'YYYY-MM-DD');
     return this.journal
+      .filter((jr) => moment(jr.dateCreation, 'YYYY-MM-DD') >= starDate && moment(jr.dateCreation, 'YYYY-MM-DD') <= endDate)
       .filter((jr) => jr[DebitOrCredit].id === accountId)
       .reduce((prev, curr) => prev + curr.amount, 0)
   }
@@ -149,5 +149,18 @@ export class BilanComponent {
     return res;
   }
 
+  onDateChange(): void {
+    this.setData()
+  }
+
+  setData(){
+    this.getJournal();
+    this.bilanActCirDebt = this.setBilanData(this.bilanActCirDebt, ['1'], ['3'], 'Actifs circulants', 'Dettes')
+    this.bilanActImoCapital = this.setBilanData(this.bilanActImoCapital, ['2'], ['4'], 'Actifs immobilisés', 'Capitaux')
+    this.totalActifs = this.bilanActCirDebt.reduce((prev, curr) => prev + (curr?.actif?.amount ?? 0), 0)
+    this.totalActifs += this.bilanActImoCapital.reduce((prev, curr) => prev + (curr?.actif?.amount ?? 0), 0)
+    this.totalPassifs = this.bilanActCirDebt.reduce((prev, curr) => prev + (curr?.passif?.amount ?? 0), 0)
+    this.totalPassifs += this.bilanActImoCapital.reduce((prev, curr) => prev + (curr?.passif?.amount ?? 0), 0)
+  }
 
 }

@@ -2,7 +2,7 @@ label.text-center{
     display: block;
 }
 ::ng-deep{
-    th{
+    .ledger-table th{
         width: calc(100% / 4);
     }
 }

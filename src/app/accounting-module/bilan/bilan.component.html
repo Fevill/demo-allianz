@@ -1,6 +1,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
+            <div class="row justify-content-center">
+                <div class="form-group col-sm-6 col-md-5 col-lg-4 col-xl-3 py-2">
+                    <div class="text-center">Date de cloture du bilan</div>
+                    <input class="form-control" [(ngModel)]='date' format="DD-MM-YYYY" type="date" (change)="onDateChange()">
+                </div>
+            </div>
             <div class="row">
                 <div class="col text-center">
                     Actifs <span *ngIf='totalActifs!==undefined'>( {{totalActifs}} )</span>

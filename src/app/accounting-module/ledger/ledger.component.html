@@ -21,10 +21,10 @@
         </div>
         <div class="row justify-content-md-center pb-2">
                     <div class="form-group col">
-                        <data-table [headers]="headers" [data]="soldLedger.debit.ledgerRow"></data-table>
+                        <data-table class="ledger-table" [headers]="headers" [data]="soldLedger.debit.ledgerRow"></data-table>
                     </div>
                     <div class="form-group col">
-                        <data-table [headers]="headers" [data]="soldLedger.credit.ledgerRow"></data-table>
+                        <data-table class="ledger-table" [headers]="headers" [data]="soldLedger.credit.ledgerRow"></data-table>
                     </div>
         </div>
     </ng-container>

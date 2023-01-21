@@ -17,7 +17,7 @@ export class DataTableComponent {
   data!: any[]
   @Input()
   hasAction!: boolean;
-
+  headersLocal!: Theader
 
   enumCtx = Crud;
 
@@ -41,6 +41,12 @@ export class DataTableComponent {
         this.router.navigate([this.router.url, 'update'], { state: { data: data, action: Crud.UPDATE } });
         break;
     }
+  }
+
+  ngOnInit(){
+    this.headersLocal = {
+      ...this.headers
+    };
   }
 
 }

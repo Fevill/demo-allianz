@@ -4,7 +4,7 @@
             <button type="submit" class="btn btn-primary" (click)="newJournalRow()">Nouveau</button>
         </div>
     </div>
-    <data-table [headers]="headers" [data]="data" [hasAction]='true'></data-table>
+    <data-table class="journal-table" [headers]="headers" [data]="data" [hasAction]='true'></data-table>
 </div>
 
 <router-outlet></router-outlet>
