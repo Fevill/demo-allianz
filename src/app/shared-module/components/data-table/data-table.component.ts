@@ -11,7 +11,7 @@ import { Theader } from './models/Theader';
 export class DataTableComponent {
 
   @Input()
-  headers!: Theader[]
+  headers!: Theader
 
   @Input()
   data!: any[]

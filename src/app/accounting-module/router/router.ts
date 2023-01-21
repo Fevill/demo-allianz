@@ -7,6 +7,7 @@ import { AccountingDetailsComponent } from "../accounting/accounting-details/acc
 import { AccountingHomeComponent } from "../accounting/accounting-details/accounting-home/accounting-home.component";
 import { AccountingComponent } from "../accounting/accounting.component";
 import { BalanceComponent } from "../balance/balance.component";
+import { BilanComponent } from "../bilan/bilan.component";
 import { JournalRowCreateComponent } from "../journal/journal-row-create/journal-row-create.component";
 import { JournalRowUpdateComponent } from "../journal/journal-row-update/journal-row-update.component";
 import { JournalComponent } from "../journal/journal.component";
@@ -59,7 +60,7 @@ export const ACCOUNTING_ROUTES: Routes = [
                         },
                         {
                             path: 'bilan',
-                            component: InConstructionComponent
+                            component: BilanComponent
                         },
                         {
                             path: 'graph',

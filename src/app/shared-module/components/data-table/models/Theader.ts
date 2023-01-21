@@ -1,8 +1,7 @@
 import { EnumType } from "./enum-type";
+import { Tcolumn } from "./Tcolumn";
 
 export interface Theader {
-    label:string,
-    display:string,
-    dataType?: EnumType,
-    dataFormater?:string
+    columns: Tcolumn[],
+    isShow?:boolean
 }

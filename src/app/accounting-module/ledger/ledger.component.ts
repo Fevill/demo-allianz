@@ -22,8 +22,10 @@ export class LedgerComponent {
   soldLedger!: SoldLedger;
   account!: Account;
 
-  headers: Theader[] = [
-    { display: "Id", label: 'id' },
+  headers: Theader= {
+    isShow:true,
+    columns: [
+    { display: "Id", label: 'id' , width: '10%'},
     {
       display: "Date",
       label: 'dateCreation',
@@ -33,6 +35,7 @@ export class LedgerComponent {
     { display: "Label", label: 'label' },
     { display: "Montant", label: 'amount' },
   ]
+}
 
 
   ngOnInit(): void {

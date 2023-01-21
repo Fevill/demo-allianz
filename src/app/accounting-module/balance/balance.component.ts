@@ -14,17 +14,20 @@ import { AccountBalance } from '../model/account-balance';
 export class BalanceComponent {
 
   accounts!: Account[];
-  balance!:AccountBalance[];
+  balance!: AccountBalance[];
   data = JOURNAL;
 
-  headers: Theader[] = [
-    { display: "Id", label: 'id' },
-    { display: "Compte", label: 'account' },
-    { display: "Débit", label: 'debit' },
-    { display: "Crédit", label: 'credit' },
-    { display: "Solde Débiteur", label: 'soldDebit' },
-    { display: "Solde Créditeur", label: 'soldCredit' },
-  ]
+  headers: Theader = {
+    isShow: true,
+    columns: [
+      { display: "Id", label: 'id' , width: '10%'},
+      { display: "Compte", label: 'account' },
+      { display: "Débit", label: 'debit' },
+      { display: "Crédit", label: 'credit' },
+      { display: "Solde Débiteur", label: 'soldDebit' },
+      { display: "Solde Créditeur", label: 'soldCredit' },
+    ]
+  }
 
   ngOnInit(): void {
     this.getAccounts();
@@ -35,30 +38,30 @@ export class BalanceComponent {
     this.accounts = ACCOUNTS;
   }
 
-  getDebitOrCreditTotal(DebitOrCredit: DebitCredit,accountId:string): number {
+  getDebitOrCreditTotal(DebitOrCredit: DebitCredit, accountId: string): number {
     return this.data
       .filter((jr) => jr[DebitOrCredit].id === accountId)
       .reduce((prev, curr) => prev + curr.amount, 0)
   }
 
-  getBalance():AccountBalance[]{
-    let balance:AccountBalance[];
-    balance = this.accounts.map((a)=>{
-      let sold = this.getDebitOrCreditTotal(DebitCredit.DEBIT,a.id)- this.getDebitOrCreditTotal(DebitCredit.CREDIT,a.id)
+  getBalance(): AccountBalance[] {
+    let balance: AccountBalance[];
+    balance = this.accounts.map((a) => {
+      let sold = this.getDebitOrCreditTotal(DebitCredit.DEBIT, a.id) - this.getDebitOrCreditTotal(DebitCredit.CREDIT, a.id)
       let soldDebit;
       let soldCredit;
-      if(sold>0){
+      if (sold > 0) {
         soldDebit = Math.abs(sold)
         soldCredit = 0
-      }else {
+      } else {
         soldDebit = 0
         soldCredit = Math.abs(sold)
       }
       let row = {
-        id:a.number,
-        account:a.name,
-        debit:this.getDebitOrCreditTotal(DebitCredit.DEBIT,a.id),
-        credit:this.getDebitOrCreditTotal(DebitCredit.CREDIT,a.id),
+        id: a.number,
+        account: a.name,
+        debit: this.getDebitOrCreditTotal(DebitCredit.DEBIT, a.id),
+        credit: this.getDebitOrCreditTotal(DebitCredit.CREDIT, a.id),
         soldDebit,
         soldCredit
       } as AccountBalance;
@@ -66,15 +69,15 @@ export class BalanceComponent {
       return row
     })
 
-   let total = balance.reduce((prev:AccountBalance, curr:AccountBalance) => {
+    let total = balance.reduce((prev: AccountBalance, curr: AccountBalance) => {
       prev.credit += curr.credit
       prev.debit += curr.debit
       prev.soldCredit += curr.soldCredit
       prev.soldDebit += curr.soldDebit
       return prev
-    },{id:'',account:'Totale',debit:0,credit:0,soldCredit:0,soldDebit:0} as AccountBalance)
-    
-    balance.splice(0,0,total)
+    }, { id: '', account: 'Totale', debit: 0, credit: 0, soldCredit: 0, soldDebit: 0 } as AccountBalance)
+
+    balance.splice(0, 0, total)
     return balance;
   }
 }

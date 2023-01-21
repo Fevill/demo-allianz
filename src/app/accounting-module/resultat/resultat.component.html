@@ -1,5 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <resultat-table></resultat-table>
+        <div class="col">
+            <resultat-table [headers]="showHeaders" [data]="resultatExp" ></resultat-table>
+            <resultat-table [headers]="hideHeaders" [data]="resultatEnt" ></resultat-table>
+            <resultat-table [headers]="hideHeaders" [data]="resultatOth" ></resultat-table>
+        </div>
     </div>
 </div>

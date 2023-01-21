@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TYPE_ACCOUNT } from 'src/app/shared-module/constant/data/type-account';
 import { Account } from '../../model/account';
-import ACCOUNTS from '../../../shared-module/constant/data/';
+import ACCOUNTS from '../../../shared-module/constant/data/accounts.json';
 import { TypeAccount } from '../../model/type-account';
 import { Crud } from '../../model/crud';
 import { Router } from '@angular/router';

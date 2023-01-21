@@ -31,11 +31,7 @@ export class AccountingDetailsComponent {
     },
     {
       link:'bilan',
-      label:'Bilan initial'
-    },
-    {
-      link:'bilan',
-      label:'Bilan final'
+      label:'Bilan'
     },
     {
       link:'graph',

@@ -3,10 +3,10 @@ import { Patrimoine } from "./patrimoine";
 import { TypeAccount } from "./type-account";
 
 export interface Account {   
-    category?:Category;
+    category?:string|Category|undefined;
     id:string,
     name: string;
     number:string;
-    patrimoine?:Patrimoine;
+    patrimoine?:string|Patrimoine|undefined;
     typeId: string;
 } 

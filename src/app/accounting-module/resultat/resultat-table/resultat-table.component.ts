@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ignoreElements } from 'rxjs';
 import { EnumType } from 'src/app/shared-module/components/data-table/models/enum-type';
 import { Theader } from 'src/app/shared-module/components/data-table/models/Theader';
-import JOURNAL from '../../../../shared-module/constant/data/journal.json';
+
+import { Resultat } from '../../model/resultat';
 
 @Component({
   selector: 'resultat-table',
@@ -9,19 +11,10 @@ import JOURNAL from '../../../../shared-module/constant/data/journal.json';
   styleUrls: ['./resultat-table.component.scss']
 })
 export class ResultatTableComponent {
-  
-  data = JOURNAL;
 
-  headers: Theader[] = [
-    { display: "Id", label: 'id' },
-    {
-      display: "Date",
-      label: 'dateCreation',
-      dataType: EnumType.DATE,
-      dataFormater: 'DD/MM/YYYY'
-    },
-    { display: "Label", label: 'label' },
-    { display: "Montant", label: 'amount' },
-  ]
+  @Input()
+  data!: Resultat[];
+  @Input()
+  headers!: Theader;
 
 }

@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col text-center">
+                    Actifs <span *ngIf='totalActifs!==undefined'>( {{totalActifs}} )</span>
+                </div>
+                <div class="col text-center">
+                    Passifs  <span *ngIf='totalPassifs!==undefined'>( {{totalPassifs}} )</span>
+                </div>
+            </div>
+            <bilan-table [headers]="headers" [data]="bilanActCirDebt"></bilan-table>
+            <bilan-table [headers]="headers" [data]="bilanActImoCapital"></bilan-table>
+        </div>
+    </div>
+</div>

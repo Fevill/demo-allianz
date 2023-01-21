@@ -20,6 +20,8 @@ import { LedgerComponent } from './ledger/ledger.component';
 import { BalanceComponent } from './balance/balance.component';
 import { ResultatComponent } from './resultat/resultat.component';
 import { ResultatTableComponent } from './resultat/resultat-table/resultat-table.component';
+import { BilanComponent } from './bilan/bilan.component';
+import { BilanTableComponent } from './bilan/bilan-table/bilan-table.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { ResultatTableComponent } from './resultat/resultat-table/resultat-table
     LedgerComponent,
     BalanceComponent,
     ResultatComponent,
-    ResultatTableComponent
+    ResultatTableComponent,
+    BilanComponent,
+    BilanTableComponent
   ],
   imports: [
     FormsModule,
