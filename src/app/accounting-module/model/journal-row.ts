@@ -3,7 +3,7 @@ import { Account } from "./account";
 export interface JournalRow {
     id:string,
     label: string;
-    dateCreation:string;
+    dateOperation:string;
     credit:Account;
     debit:Account;
     tva?:number;

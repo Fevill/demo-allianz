@@ -23,7 +23,7 @@ export class JournalComponent {
       { display: "Label", label: 'label' },
       {
         display: "Date de Création",
-        label: 'dateCreation',
+        label: 'dateOperation',
         dataType: EnumType.DATE,
         dataFormater: 'DD/MM/YYYY'
       },

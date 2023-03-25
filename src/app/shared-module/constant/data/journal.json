@@ -2,7 +2,7 @@
     {
         "id": "1",
         "label": "Row 1",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "5",
             "number": "1060",
@@ -26,7 +26,7 @@
     {
         "id": "2",
         "label": "Row 2",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "1",
             "number": "1000",
@@ -50,7 +50,7 @@
     {
         "id": "3",
         "label": "Row 3",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "7",
             "number": "1100",
@@ -74,7 +74,7 @@
     {
         "id": "4",
         "label": "Row 4",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "3",
             "number": "1020",
@@ -97,7 +97,7 @@
     {
         "id": "5",
         "label": "Row 5",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "3",
             "number": "1020",
@@ -120,7 +120,7 @@
     {
         "id": "6",
         "label": "Arachide",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
             "id": "50",
             "number": "3630",

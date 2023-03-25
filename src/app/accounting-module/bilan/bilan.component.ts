@@ -50,7 +50,7 @@ export class BilanComponent {
       {
         "id": "8",
         "label": "Arachide",
-        "dateCreation": "2023-01-12",
+        "dateOperation": "2023-01-12",
         "credit": {
           "id": "",
           "number": "2800",
@@ -113,7 +113,7 @@ export class BilanComponent {
     const starDate = moment('01-01-2023', 'DD-MM-YYYY');
     const endDate = moment(this.date, 'YYYY-MM-DD');
     return this.journal
-      .filter((jr) => moment(jr.dateCreation, 'YYYY-MM-DD') >= starDate && moment(jr.dateCreation, 'YYYY-MM-DD') <= endDate)
+      .filter((jr) => moment(jr.dateOperation, 'YYYY-MM-DD') >= starDate && moment(jr.dateOperation, 'YYYY-MM-DD') <= endDate)
       .filter((jr) => jr[DebitOrCredit].id === accountId)
       .reduce((prev, curr) => prev + curr.amount, 0)
   }

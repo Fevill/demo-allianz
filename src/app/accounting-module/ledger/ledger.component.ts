@@ -28,7 +28,7 @@ export class LedgerComponent {
     { display: "Id", label: 'id' , width: '10%'},
     {
       display: "Date",
-      label: 'dateCreation',
+      label: 'dateOperation',
       dataType: EnumType.DATE,
       dataFormater: 'DD/MM/YYYY'
     },
@@ -74,7 +74,7 @@ export class LedgerComponent {
       .map((jr) => {
         let ledgerRow = {} as LedgerRow;
         ledgerRow.amount = jr.amount;
-        ledgerRow.dateCreation = jr.dateCreation;
+        ledgerRow.dateOperation = jr.dateOperation;
         ledgerRow.label = jr.label;
         ledgerRow.id = jr.id;
         return ledgerRow;

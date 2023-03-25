@@ -38,7 +38,7 @@ export class JournalRowEditComponent {
     this.form = this.fb.group({
       id: '',
       label: [this.data?.label ?? '', Validators.required],
-      dateCreation: [this.data?.dateCreation ?? '', Validators.required],
+      dateOperation: [this.data?.dateOperation ?? '', Validators.required],
       creditId: [this.data?.credit?.id ?? '', Validators.required],
       debitId: [this.data?.debit.id ?? '', Validators.required],
       tva: [this.data?.tva ?? ''],
@@ -70,7 +70,7 @@ export class JournalRowEditComponent {
 
       journalRow.id = this.form.value.id;
       journalRow.label = this.form.value.label;
-      journalRow.dateCreation = this.form.value.dateCreation;
+      journalRow.dateOperation = this.form.value.dateOperation;
       journalRow.credit = this.getAccount(this.form.value.creditId);;
       journalRow.debit = this.getAccount(this.form.value.debitId);
       journalRow.tva = this.form.value.tva;

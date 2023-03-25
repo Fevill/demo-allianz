@@ -1,6 +1,6 @@
 export interface LedgerRow {
     id: string,
-    dateCreation: string,
+    dateOperation: string,
     label: string,
     amount: number
   }
